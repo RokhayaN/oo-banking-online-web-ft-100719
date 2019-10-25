@@ -16,9 +16,9 @@ class Transfer
     if @sender.balance > @amount && @status == "pending"
       @sender.balance -= @amount
       @receiver.balance += @amount
-      @status = "complete"
+      @status == "complete"
     else
-      @status = "rejected"
+      @status == "rejected"
       return "Transaction rejected. Please check your account balance."
     end
   end
@@ -27,7 +27,7 @@ class Transfer
     if @status == "complete"
       @sender.balance += @amount
       @receiver.balance -= @amount
-      @status = "reversed"
+      @status == "reversed"
     end
   end
 end
